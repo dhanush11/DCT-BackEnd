@@ -11,6 +11,7 @@ router.get('/', (req, res) => {
   })
 })
 
+
 router.post('/', (req, res) => {
   let body = _.pick(req.body, ['name', 'startDate', 'students', 'frequency'])
   let batch = new Batch(body)
@@ -26,7 +27,7 @@ router.post('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
   let id = req.params.id;
-  Batch.findById(id).then((batch) => {
+  Batch.findById(id).populate('students').then((batch) => {
     res.send(batch);
   }).catch((err) => {
     res.send(err);
