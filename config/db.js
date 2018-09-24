@@ -7,8 +7,10 @@ mongoose.Promise = global.Promise;
 //   console.log(err);
 // })
 
-mongoose.connect(process.env.MONGODB_URI || `mongodb://dhanush17:mlab17@ds131258.mlab.com:31258/dct` || 'mongodb://localhost/polling');
 //mongoose.connect(mongodb://dhanush17:mlab17@ds131258.mlab.com:31258/dct)
+mongoose.connect('mongodb://dhanush17:mlab17@ds131258.mlab.com:31258/dct', { useMongoClient: true }, () => {
+    console.log("DB is connected")
+})
 
 
 //mongoose.set('useCreateIndex', true);
