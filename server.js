@@ -9,6 +9,8 @@ app.use(express.json());
 app.use(morgan('short'));
 app.use('/', router);
 
-app.listen(port, () => {
-  console.log(`listening on port ${port}`);
-})
+// app.listen(port, () => {
+//   console.log(`listening on port ${port}`);
+// })
+
+app.listen(process.env.PORT || 3000, () => console.log('Server has started'));
