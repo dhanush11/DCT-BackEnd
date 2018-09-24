@@ -6,11 +6,11 @@ mongoose.Promise = global.Promise;
 // }).catch((err) => {
 //   console.log(err);
 // })
-//mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/polling');
-mongoose.connect(mongodb://dhanush17:mlab17@ds131258.mlab.com:31258/dct)
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/polling');
+//mongoose.connect(mongodb://dhanush17:mlab17@ds131258.mlab.com:31258/dct)
 
 
-mongoose.set('useCreateIndex', true);
+//mongoose.set('useCreateIndex', true);
 
 module.exports = {
   mongoose
