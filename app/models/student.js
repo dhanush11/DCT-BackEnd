@@ -9,11 +9,11 @@ const studentSchema = new Schema({
   },
   email : {
     type : String,
-    required : true
+    //required : true
   },
   mobile : {
     type : Number,
-    required : true
+    //required : true
   },
   batches : [{
     type: Schema.Types.ObjectId,

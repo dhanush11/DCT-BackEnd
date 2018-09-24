@@ -4,7 +4,7 @@ const router = express.Router();
 const {Batch} = require('../models/batch');
 
 router.get('/', (req, res) => {
-  Batch.find().then((batches) => {
+  Batch.find().populate('students').then((batches) => {
     res.send(batches);
   }).catch((err) => {
     res.send(err);
